@@ -1,0 +1,10 @@
+<div class="wrapper " *ngIf="playerVsPlayer?false:playerVsComputer?false:true">
+    <div class="inner-container">
+        <h1>Select play mode</h1>
+        <button class="btn" (click)="gameMenu(PlayerVSComputer)" #PlayerVSComputer type="button">Computer VS Computer</button>
+        <button class="btn" (click)="gameMenu(PlayerVSPlayer)" #PlayerVSPlayer type="button">Player VS Computer</button>
+    </div>
+</div>
+<app-game-panel *ngIf="playerVsPlayer"></app-game-panel>
+<app-game-playercomputer *ngIf="playerVsComputer"></app-game-playercomputer>
+<app-result-panel *ngIf=""></app-result-panel>

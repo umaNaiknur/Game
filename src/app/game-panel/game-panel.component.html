@@ -1,0 +1,91 @@
+<div class="row">
+  <div class="col-md-12 d-flex">
+    <div class="col-md-8">
+      <div class="wrapper">
+        <div class="container col-md-4">
+          <div class="box-2">
+            <div class="button-Align">
+              <button type="button" data-toggle="modal" id="timerButton" data-target="#staticBackdrop" ><h1>{{timerInSeconds}}</h1><p>Timer</p></button>
+            </div>
+            <div class="middle-align">
+              <h3>Computer</h3>
+              <hr style="background-color: white;" >
+              <h3>Player</h3>
+            </div>
+            <div class="imageValue">
+              <h3>Choose your move</h3>
+              <a (click)="onClickImage(rock)"><img #rock src="https://res.cloudinary.com/itsellej/image/upload/v1533400140/rock-paper-scissors/rock.png" alt="rock"></a>
+              <a (click)="onClickImage(paper)"><img #paper src="https://res.cloudinary.com/itsellej/image/upload/v1533400143/rock-paper-scissors/paper.png" alt="paper"></a>
+              <a (click)="onClickImage(scissor)"><img #scissor src="https://res.cloudinary.com/itsellej/image/upload/v1533400144/rock-paper-scissors/scissors.png" alt="scissor"></a>
+            </div>
+            <hr >
+            <div class="ComputerImageValue" id="ComputerImageValueid">
+              <h3>Computer Move</h3>
+              <!-- <img [ngClass]="{'imageBlur img':ComputerMoveVal==='rock'?true:false}"  src="https://res.cloudinary.com/itsellej/image/upload/v1533400140/rock-paper-scissors/rock.png" alt="rock">
+              <img [ngClass]="{'imageBlur img':ComputerMoveVal==='paper'?true:false}"  src="https://res.cloudinary.com/itsellej/image/upload/v1533400143/rock-paper-scissors/paper.png" alt="paper">
+              <img [ngClass]="{'imageBlur img':ComputerMoveVal==='scissor'?true:false}"  src="https://res.cloudinary.com/itsellej/image/upload/v1533400144/rock-paper-scissors/scissors.png" alt="scissor"> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2 ">
+      <div class="card resultsDisplay" style="width: 18rem;">
+        <div class="card-body">
+          <h1 class="card-title">Score Card!!!</h1>
+
+          <div class="card-text">
+          <div>
+          <h3>Player</h3>
+          <h1 style="text-align: center;width: 100%;">{{playerScore.length}}</h1>
+        </div>
+          <hr style=" border: 1px solid;height: 90%;" >
+          <div>
+            <h3>Computer</h3>
+            <h1 style="text-align: center;width: 100%;">{{computerScore.length}}</h1>
+          </div>
+        </div>
+          <a  class="btn btn-primary" (click)="playAgain()">Play Again</a>
+          <a  class="btn btn-danger ml-3">Go To Menu</a>
+        </div>
+      </div>
+      <!-- <div class="d-flex" style="height: 100%;"> -->
+        <!-- <div>
+          <h3>Player</h3>
+          <h1 style="text-align: center;width: 100%;">{{playerScore.length}}</h1>
+        </div>
+          <hr style=" border: 1px solid;height: 90%;" >
+          <div>
+            <h3>Computer</h3>
+            <h1 style="text-align: center;width: 100%;">{{computerScore.length}}</h1>
+          </div> -->
+      <!-- </div> -->
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div> -->
+      <div class="modal-body">
+        <h3>How much minutes You need to play?</h3>
+        <input class="form-control" type="number" #timerInput id="timerInput">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary"  id="closeButton"data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="timer(timerInput)">Start</button>
+      </div>
+    </div>
+  </div>
+</div>

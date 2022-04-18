@@ -1,0 +1,58 @@
+.wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    border: 1px solid;
+    height: 500px;
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #007FFF;
+}
+
+.imageValue img {
+    height: 80px;
+    width: 80px;
+}
+
+.box-2 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.button-Align {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-Align button {
+    padding: 10px 25px;
+    border-radius: 30px;
+}
+
+.imageValue img:hover {
+    height: 73px;
+    width: 73px;
+}
+
+.ComputerImageValue img {
+    height: 80px;
+    width: 80px;
+}
+
+.imageBlur {
+    // filter: blur(0px);
+    background-color: brown;
+    height: 85px;
+    width: 85px;
+}
+
+.resultsDisplay {
+    height: 400px;
+    width: 400px;
+    background-color: rgb(52, 52, 182);
+}
